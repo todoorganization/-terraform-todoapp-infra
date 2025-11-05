@@ -26,7 +26,7 @@ module "acr" {
 module "sql_server" {
   depends_on      = [module.rg]
   source          = "../../modules/azurerm_sql_server"
-  sql_server_name = "sql-dev-todoapp-0021"
+  sql_server_name = "sql-dev-todoapp-01"
   rg_name         = "rg-dev-todoapp-01"
   location        = "centralindia"
   admin_username  = "devopsadmin"
@@ -46,12 +46,13 @@ module "sql_db" {
 module "aks" {
   depends_on = [module.rg]
   source     = "../../modules/azurerm_kubernetes_cluster"
-  aks_name   = "aks-dev-todoapp1"
+  aks_name   = "aks-dev-todoapp"
   location   = "centralindia"
   rg_name    = "rg-dev-todoapp-01"
   dns_prefix = "aks-dev-todoapp"
   tags       = local.common_tags
 }
+
 
 
 # module "pip" {
