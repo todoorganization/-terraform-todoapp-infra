@@ -1,6 +1,7 @@
 name: "Dev Terraform Workflow"
 
 on:
+  workflow_dispatch:       # 🔹 Manual trigger (Run workflow button se)
   pull_request:
     branches:
       - main
