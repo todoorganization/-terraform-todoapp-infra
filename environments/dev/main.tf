@@ -54,11 +54,11 @@ module "aks" {
 }
 
 
-module "pip" {
-  source   = "../../modules/azurerm_public_ip"
-  pip_name = "pip-dev-todoapp"
-  rg_name  = "rg-dev-todoapp-01"
-  location = "centralindia"
-  sku      = "Basic"
-  tags     = local.common_tags
+# module "pip" {
+  # source   = "../../modules/azurerm_public_ip"
+  # pip_name = "pip-dev-todoapp"
+  # rg_name  = "rg-dev-todoapp-01"
+  # location = "centralindia"
+  # sku      = "Basic"
+  # tags     = local.common_tags
 }
