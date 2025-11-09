@@ -7,7 +7,7 @@
   # push:
     # branches:
       # - main   
-name: "Dev Terraform Workflow"      
+name: "Prod Terraform Workflow"      
 
 on:
   workflow_dispatch:       # 🔹 Manual trigger (Run workflow button se)
